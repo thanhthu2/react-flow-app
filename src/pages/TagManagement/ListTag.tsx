@@ -87,7 +87,7 @@ export const ListTag = () => {
 
   const getListTag = async () => {
     setLoading(true);
-    const [err, res] = await transformRequest(backendSrv.get(`${BASE_URL}/reports`));
+    const [err, res] = await transformRequest(backendSrv.get(`${BASE_URL}/tags`));
     setLoading(false);
     if (err) return showAlert(MSG_ERROR, TYPE_REQUEST.WARNING);
 
